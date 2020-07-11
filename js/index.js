@@ -2,27 +2,50 @@
 
 //(1) double click
 const heading = document.querySelector('.logo-heading')
-heading.addEventListener('dblclick', (event) => {
-    event.target.style.color = 'DarkOrchid'
+heading.addEventListener('dblclick', () => {
+    heading.style.color = 'DarkOrchid'
+    heading.style.fontSize = '5rem'
 })
 
-//(2)
+//(2) mouse enter / mouse leave
 const navMenu = document.querySelectorAll('.nav-link')
 console.log(navMenu)
 navMenu[0].addEventListener('mouseenter', (event) => {
     event.target.style.color = 'DarkCyan'
+    event.target.style.fontSize = '2.2rem'
 })
 navMenu[1].addEventListener('mouseenter', (event) => {
     event.target.style.color = 'DarkCyan'
+    event.target.style.fontSize = '2.2rem'
 })
 navMenu[2].addEventListener('mouseenter', (event) => {
     event.target.style.color = 'DarkCyan'
+    event.target.style.fontSize = '2.2rem'
 })
 navMenu[3].addEventListener('mouseenter', (event) => {
     event.target.style.color = 'DarkCyan'
+    event.target.style.fontSize = '2.2rem'
 })
 
-//(2/3) mouse over / mouse leave
+navMenu[0].addEventListener('mouseleave', (event) => {
+    event.target.style.color = '#212529'
+    event.target.style.fontSize = '1.6rem'
+})
+navMenu[1].addEventListener('mouseleave', (event) => {
+    event.target.style.color = '#212529'
+    event.target.style.fontSize = '1.6rem'
+})
+navMenu[2].addEventListener('mouseleave', (event) => {
+    event.target.style.color = '#212529'
+    event.target.style.fontSize = '1.6rem'
+})
+navMenu[3].addEventListener('mouseleave', (event) => {
+    event.target.style.color = '#212529'
+    event.target.style.fontSize = '1.6rem'
+})
+
+
+//(3/4) mouse over / mouse leave
 const funBus = document.querySelector('.intro img')
 console.log(funBus);
 funBus.addEventListener('mouseover', () => {
@@ -34,7 +57,30 @@ funBus.addEventListener('mouseleave', () => {
     funBus.style.transform = 'scale(1.0)'
 })
 
-//(4) wheel
+//mouse over / mouse leave
+
+const travelPics = document.querySelectorAll('.img-content img')
+console.log(travelPics);
+travelPics[0].addEventListener('mouseover', (event) => {
+    event.target.style.transform = 'scale(1.2)'
+    event.target.style.transition = 'all 0.3s'
+})
+
+travelPics[0].addEventListener('mouseleave', () => {
+    event.target.style.transform = 'scale(1.0)'
+})
+
+travelPics[1].addEventListener('mouseover', () => {
+    event.target.style.transform = 'scale(1.2)'
+    event.target.style.transition = 'all 0.3s'
+})
+
+travelPics[1].addEventListener('mouseleave', () => {
+    event.target.style.transform = 'scale(1.0)'
+})
+
+
+//(5) wheel
 const introHead = document.querySelector('.intro h2')
 introHead.onwheel = zoom;
 
@@ -53,24 +99,25 @@ function zoom(event) {
 let scale = 1;
 
 
-//(5) mouse down                         
+//(6) mouse down                         
 const destination = document.querySelector('.content-destination')
 destination.addEventListener('mousedown', () => {
     destination.style.color = "DarkCyan"
 })
 
 
-//(6) resize
+//(7) resize
 const boatImg = document.querySelector('.content-destination img')
 window.addEventListener('resize', () => {
     boatImg.src = 'https://isorepublic.com/wp-content/uploads/2018/11/isorepublic-cruise-breakfast-1-1100x734.jpg'
 })
 
-//(7) click
+//(8) click
 const btn = document.querySelectorAll('.btn')
 console.log(btn)
 btn[0].addEventListener('click', (event) => {
     event.target.style.backgroundColor = 'GoldenRod'
+    event.target.style.color = 'DarkSlateGrey'
 })
 btn[1].addEventListener('click', (event) => {
     event.target.style.backgroundColor = 'Gainsboro'
@@ -78,23 +125,23 @@ btn[1].addEventListener('click', (event) => {
 })
 btn[2].addEventListener('click', (event) => {
     event.target.style.backgroundColor = 'DodgerBlue'
+    event.target.style.color = 'DarkSlateGrey'
 })
 
 
-
-
-
-//(8)
-
-
-
-
-//(9)
-
-
+//(9) mouse move
+const backGround = document.querySelector('body')
+backGround.addEventListener('mousemove', () => {
+    backGround.style.backgroundColor = 'LemonChiffon'
+})
 
 
 //(10)
+
+
+
+
+
 
 
 
