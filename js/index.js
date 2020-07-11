@@ -18,26 +18,26 @@ funBus.addEventListener('mouseleave', () => {
     funBus.style.transform = 'scale(1.0)'
 })
 
-//(3) scale / prevent default
+//(4) zoom
 function zoom(event) {
     event.preventDefault();
 
     scale += event.deltaY * -0.01;
 
     //restricting scale
-    scale = Math.min(Math.max(.125, scale), 4);
+    scale = Math.min(Math.max(.125, scale) ,2);
 
     //applying scale transform
     introHead.style.transform = `scale(${scale})`
 }
 
-let scale = .2;
+let scale = -.2;
 
-//(4) zoom
+
 const introHead = document.querySelector('.intro h2')
 introHead.onwheel = zoom;
 
-//(5/6) focus / blur
+//(5/6) focus / blur - still having issue with this one                              
 const destination = document.querySelector('.content-destination')
 destination.addEventListener('focus', (event) => {
     event.target.style.background = 'yellow'
