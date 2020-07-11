@@ -1,12 +1,28 @@
 // Your code goes here
 
-//(1)double click
+//(1) double click
 const heading = document.querySelector('.logo-heading')
 heading.addEventListener('dblclick', (event) => {
-    event.target.style.color = 'pink'
+    event.target.style.color = 'DarkOrchid'
 })
 
-//(2) mouse over
+//(2)
+const navMenu = document.querySelectorAll('.nav-link')
+console.log(navMenu)
+navMenu[0].addEventListener('mouseenter', (event) => {
+    event.target.style.color = 'DarkCyan'
+})
+navMenu[1].addEventListener('mouseenter', (event) => {
+    event.target.style.color = 'DarkCyan'
+})
+navMenu[2].addEventListener('mouseenter', (event) => {
+    event.target.style.color = 'DarkCyan'
+})
+navMenu[3].addEventListener('mouseenter', (event) => {
+    event.target.style.color = 'DarkCyan'
+})
+
+//(2/3) mouse over / mouse leave
 const funBus = document.querySelector('.intro img')
 console.log(funBus);
 funBus.addEventListener('mouseover', () => {
@@ -18,7 +34,10 @@ funBus.addEventListener('mouseleave', () => {
     funBus.style.transform = 'scale(1.0)'
 })
 
-//(4) zoom
+//(4) wheel
+const introHead = document.querySelector('.intro h2')
+introHead.onwheel = zoom;
+
 function zoom(event) {
     event.preventDefault();
 
@@ -31,35 +50,41 @@ function zoom(event) {
     introHead.style.transform = `scale(${scale})`
 }
 
-let scale = -.2;
+let scale = 1;
 
 
-const introHead = document.querySelector('.intro h2')
-introHead.onwheel = zoom;
-
-//(5/6) focus / blur - still having issue with this one                              
+//(5) mouse down                         
 const destination = document.querySelector('.content-destination')
-destination.addEventListener('focus', (event) => {
-    event.target.style.background = 'yellow'
-});
-destination.addEventListener('blur', (event) => {
-    event.target.style.background = '';
-});
+destination.addEventListener('mousedown', () => {
+    destination.style.color = "DarkCyan"
+})
 
-//(7) resize
+
+//(6) resize
 const boatImg = document.querySelector('.content-destination img')
 window.addEventListener('resize', () => {
     boatImg.src = 'https://isorepublic.com/wp-content/uploads/2018/11/isorepublic-cruise-breakfast-1-1100x734.jpg'
 })
 
-//(8)click
-
-const button = document.querySelectorAll('.btn')
-console.log(button)
-button[1].addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'yellow'
+//(7) click
+const btn = document.querySelectorAll('.btn')
+console.log(btn)
+btn[0].addEventListener('click', (event) => {
+    event.target.style.backgroundColor = 'GoldenRod'
+})
+btn[1].addEventListener('click', (event) => {
+    event.target.style.backgroundColor = 'Gainsboro'
+    event.target.style.color = 'DarkSlateGrey'
+})
+btn[2].addEventListener('click', (event) => {
+    event.target.style.backgroundColor = 'DodgerBlue'
 })
 
+
+
+
+
+//(8)
 
 
 
