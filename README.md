@@ -47,7 +47,7 @@ Events I Used
 * `mousedown`
 * `mouseenter / mouseleave`
 * `mousemove`
-*
+* `mouseup`
 
 
 
@@ -74,7 +74,7 @@ The completion of these questions is mandatory for MVP. However, passing the qui
 
 **Follow these steps for completing your project.**
 
-* [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
-* [ ] Add your project manager as a reviewer on the pull-request
-* [ ] Your project manager will count the project as complete by merging the branch back into `main` branch.
+* [X] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
+* [X] Add your project manager as a reviewer on the pull-request
+* [X] Your project manager will count the project as complete by merging the branch back into `main` branch.
 

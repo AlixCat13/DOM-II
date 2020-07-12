@@ -100,19 +100,29 @@ let scale = 1;
 
 
 //(6) mouse down                         
-const destination = document.querySelector('.content-destination')
+const destination = document.querySelector('.content-destination h2')
 destination.addEventListener('mousedown', () => {
-    destination.style.color = "DarkCyan"
+    destination.textContent = "Adventure is Out There!!"
+    destination.style.fontSize = '3rem'
+    destination.style.fontFamily = 'Indie Flower, cursive';
+})
+
+//(7) mouse up
+const destination2 = document.querySelector('.content-destination h2')
+destination2.addEventListener('mouseup', () => {
+destination.textContent = 'Pick Your Destination'
+destination2.style.fontSize = '3rem'
+destination2.style.fontFamily = 'Indie Flower, cursive';
 })
 
 
-//(7) resize
+//(8) resize
 const boatImg = document.querySelector('.content-destination img')
 window.addEventListener('resize', () => {
     boatImg.src = 'https://isorepublic.com/wp-content/uploads/2018/11/isorepublic-cruise-breakfast-1-1100x734.jpg'
 })
 
-//(8) click
+//(9) click
 const btn = document.querySelectorAll('.btn')
 console.log(btn)
 btn[0].addEventListener('click', (event) => {
@@ -129,14 +139,11 @@ btn[2].addEventListener('click', (event) => {
 })
 
 
-//(9) mouse move
+//(10) mouse move
 const backGround = document.querySelector('body')
 backGround.addEventListener('mousemove', () => {
     backGround.style.backgroundColor = 'LemonChiffon'
 })
-
-
-//(10)
 
 
 
