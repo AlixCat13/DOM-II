@@ -65,6 +65,7 @@ funBus.addEventListener('mouseover', () => {
 
 funBus.addEventListener('mouseleave', () => {
     funBus.style.transform = 'scale(1.0)'
+    funBus.stopPropagation();
 })
 
 //mouse over / mouse leave
@@ -154,6 +155,10 @@ const backGround = document.querySelector('body')
 backGround.addEventListener('mousemove', () => {
     backGround.style.backgroundColor = 'LemonChiffon'
 })
+
+const navBackground = document.querySelector('main-navigation')
+navBackground.style.backgroundColor = 'paleYellow'
+navBackground.stopPropagation();
 
 
 
