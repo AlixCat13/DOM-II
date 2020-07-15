@@ -3,11 +3,19 @@
 
 //(1) scroll
 
-window.addEventListener('scroll', () => {
-    console.log('window.scrollY', window.scrollY)
-    if (window.scrollY >= 600) {
-        alert("Don't wait! Adventure is out there! Book your getaway now!")
-    }
+// window.addEventListener('scroll', () => {
+//     console.log('window.scrollY', window.scrollY)
+//     if (window.scrollY >= 600) {
+//         alert("Don't wait! Adventure is out there! Book your getaway now!")
+//     }
+// })
+
+//stop propagation
+
+const navBackground = document.querySelector('.main-navigation')
+navBackground.addEventListener('mouseover', () => {
+navBackground.style.backgroundColor = 'BurlyWood'
+event.stopPropagation();
 })
 
 //(2) double click
@@ -15,6 +23,7 @@ const heading = document.querySelector('.logo-heading')
 heading.addEventListener('dblclick', () => {
     heading.style.color = 'DarkOrchid'
     heading.style.fontSize = '5rem'
+    event.stopPropagation();
 })
 
 //(3) mouse enter / mouse leave
@@ -154,13 +163,29 @@ btn[2].addEventListener('click', (event) => {
 const backGround = document.querySelector('body')
 backGround.addEventListener('mousemove', () => {
     backGround.style.backgroundColor = 'LemonChiffon'
+    event.stopPropagation();
+    
 })
 
-//stop propagation
+const stopProp = document.querySelector('.content-section')
+    stopProp.addEventListener('mousemove', () => {
+        stopProp.style.backgroundColor = 'grey'
+        event.stopPropagation();
+       
+    })
 
-const navBackground = document.querySelector('main-navigation')
-navBackground.style.backgroundColor = 'paleYellow'
-navBackground.stopPropagation();
+const stopProp1 = document.querySelector('.text-content')
+stopProp1.addEventListener('mousemove', ()=> {
+    stopProp1.style.color = 'purple'
+    event.stopPropagation();
+})
+
+const stopProp2 = document.querySelector('.content-section h2')
+stopProp2.addEventListener('mousemove', () => {
+    stopProp2.style.color = 'red'
+    // event.stopPropagation();
+})
+
 
 
 
