@@ -156,6 +156,8 @@ backGround.addEventListener('mousemove', () => {
     backGround.style.backgroundColor = 'LemonChiffon'
 })
 
+//stop propagation
+
 const navBackground = document.querySelector('main-navigation')
 navBackground.style.backgroundColor = 'paleYellow'
 navBackground.stopPropagation();
