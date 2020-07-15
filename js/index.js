@@ -1,13 +1,23 @@
 // Your code goes here
 
-//(1) double click
+
+//(1) scroll
+
+window.addEventListener('scroll', () => {
+    console.log('window.scrollY', window.scrollY)
+    if (window.scrollY >= 600) {
+        alert("Don't wait! Adventure is out there! Book your getaway now!")
+    }
+})
+
+//(2) double click
 const heading = document.querySelector('.logo-heading')
 heading.addEventListener('dblclick', () => {
     heading.style.color = 'DarkOrchid'
     heading.style.fontSize = '5rem'
 })
 
-//(2) mouse enter / mouse leave
+//(3) mouse enter / mouse leave
 const navMenu = document.querySelectorAll('.nav-link')
 console.log(navMenu)
 navMenu[0].addEventListener('mouseenter', (event) => {
@@ -45,7 +55,7 @@ navMenu[3].addEventListener('mouseleave', (event) => {
 })
 
 
-//(3/4) mouse over / mouse leave
+//(4) mouse over / mouse leave
 const funBus = document.querySelector('.intro img')
 console.log(funBus);
 funBus.addEventListener('mouseover', () => {
@@ -144,6 +154,8 @@ const backGround = document.querySelector('body')
 backGround.addEventListener('mousemove', () => {
     backGround.style.backgroundColor = 'LemonChiffon'
 })
+
+
 
 
 
